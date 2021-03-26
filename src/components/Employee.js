@@ -38,6 +38,25 @@ class Employee extends Component {
             <div>
             {/* < Spinner /> */}
             <p>hello</p>
+            <table>
+                <tbody>
+                   <tr>
+                      
+                       <td> Name </td>
+                       <td> Cell </td>
+                    </tr>
+                   
+            {this.state.employeeList.map((emp, index) => (
+                <p key={index}>
+                    {emp.name.last}  {emp.name.first}  {emp.cell}
+                </p>
+            )
+              
+            )}
+
+</tbody>
+                    </table>
+                    
             </div>
 
         );
