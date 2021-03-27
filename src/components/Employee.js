@@ -7,18 +7,18 @@ const { SearchBar } = Search;
 
 class Employee extends Component {
     state = {
-        //search: "",
         employeeList: []
     };
 
-
     componentDidMount() {
-
         //
-        // could keep the getEmployees code in here
+        // could keep the getEmployees code in here, load when component has mounted
 
         this.getEmployees();
     };
+
+    //
+    // get a list of employees and setSate of employee list with the results
 
     getEmployees = () => {
         API.getEmployees()
@@ -31,24 +31,31 @@ class Employee extends Component {
     }
 
 
-
     render() {
+        //
+        // array of columns definitions for our table
 
         const columns = [{
             dataField: "login.uuid",
             text: "Id",
-            style: { backgroundColor: "#fdfcdc" }
-        }, {
-            dataField: "cell",
-            text: "Cell"
+            style: { backgroundColor: "#fdfcdc" },
+            hidden: true
         }, {
             dataField: "name.last",
             text: "Last Name",
+            style: { backgroundColor: "#e1f1fd" },
             sort: true
         }, {
             dataField: "name.first",
             text: "First Name",
+            style: { backgroundColor: "#e1f1fd" },
             sort: true
+        }, {
+            dataField: "email",
+            text: "Email"
+        }, {
+            dataField: "cell",
+            text: "Cell"
         }, {
             dataField: "dob.age",
             text: "Age",
@@ -56,8 +63,23 @@ class Employee extends Component {
         }, {
             dataField: "gender",
             text: "Gender",
+            align: "center",
             sort: true
+        }, {
+            dataField: "picture.thumbnail",
+            text: "Image",
+            formatter: imageFormatter
         }];
+
+        //
+        // format the image column 
+
+        function imageFormatter(cell, row) {
+            return (<img alt="emp image" style={{ width: 50 }} src={cell} />)
+        }
+
+        //
+        // kept the html table for reference but is replaced with the react-bootrap-table
 
         return (
             // <div>
@@ -83,6 +105,9 @@ class Employee extends Component {
             //     </table>
             // </div>
 
+            // --------------------------------------------------
+            // the toolkitprovider allows us the search the table 
+
             <div className="App">
                 <h1 className="Table-header">Employee Table</h1>
 
@@ -93,24 +118,23 @@ class Employee extends Component {
                     search>
                     {
                         props => {
-                            console.log(props)
+                            console.log("props: ", props)
                             return (
-                            <div>
-                                <br />
-                                <SearchBar {...props.searchProps} />
-                                <hr />
+                                <div>
+                                    <br />
+                                    <SearchBar {...props.searchProps} />
+                                    <hr />
 
-                                <BootstrapTable
-                                    {...props.baseProps}
-                                    hover
-                                    keyField="login.uuid" 
-                                    data={this.state.employeeList} 
-                                    columns={columns} />
-                            </div>
-
-                        )}}
+                                    <BootstrapTable
+                                        {...props.baseProps}
+                                        hover
+                                        keyField="login.uuid"
+                                        data={this.state.employeeList}
+                                        columns={columns} />
+                                </div>
+                            )
+                        }}
                 </ToolkitProvider>
-
             </div>
         )
     }
