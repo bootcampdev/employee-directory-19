@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import API from "./API.js";
-import Table from "./Table.js";
-import Spinner from "./Spinner.js";
 import BootstrapTable from "react-bootstrap-table-next";
+import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
-//import Styled from "styled-components"
+const { SearchBar } = Search;
 
 class Employee extends Component {
     state = {
@@ -31,26 +30,34 @@ class Employee extends Component {
             .catch(err => console.log(err));
     }
 
-    
+
 
     render() {
 
         const columns = [{
-            dataField: "id.value",
+            dataField: "login.uuid",
+            text: "Id",
+            style: { backgroundColor: "#fdfcdc" }
+        }, {
+            dataField: "cell",
             text: "Cell"
-          }, {
+        }, {
             dataField: "name.last",
-            text: "Last Name"
-          }, {
+            text: "Last Name",
+            sort: true
+        }, {
             dataField: "name.first",
-            text: "First Name"
-          }, {
+            text: "First Name",
+            sort: true
+        }, {
             dataField: "dob.age",
-            text: "Age"
-          }, {
+            text: "Age",
+            sort: true
+        }, {
             dataField: "gender",
-            text: "Gender"
-          }];
+            text: "Gender",
+            sort: true
+        }];
 
         return (
             // <div>
@@ -77,14 +84,32 @@ class Employee extends Component {
             // </div>
 
             <div className="App">
-                <p className="Table-header">Employee Table</p>
+                <h1 className="Table-header">Employee Table</h1>
 
-                <BootstrapTable keyField="id" data={this.state.employeeList} columns={columns} />
+                <ToolkitProvider
+                    keyField="id"
+                    data={this.state.employeeList}
+                    columns={columns}
+                    search>
+                    {
+                        props => (
+                            <div>
+                                <br />
+                                <SearchBar {...props.searchProps} />
+                                <hr />
+
+                                <BootstrapTable
+                                    hover
+                                    keyField="login.uuid" 
+                                    data={this.state.employeeList} 
+                                    columns={columns} />
+                            </div>
+
+                        )}
+                </ToolkitProvider>
+
             </div>
-
-        );
+        )
     }
-
-}
-
+};
 export default Employee;
