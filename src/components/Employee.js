@@ -92,20 +92,23 @@ class Employee extends Component {
                     columns={columns}
                     search>
                     {
-                        props => (
+                        props => {
+                            console.log(props)
+                            return (
                             <div>
                                 <br />
                                 <SearchBar {...props.searchProps} />
                                 <hr />
 
                                 <BootstrapTable
+                                    {...props.baseProps}
                                     hover
                                     keyField="login.uuid" 
                                     data={this.state.employeeList} 
                                     columns={columns} />
                             </div>
 
-                        )}
+                        )}}
                 </ToolkitProvider>
 
             </div>
