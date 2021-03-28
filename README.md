@@ -50,7 +50,19 @@ $ npx creeate-react-app employee-directory
 
 * Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
-* Repository [employee-directory-19](https://github.com/bootcampdev/employee-directory-19)
+* Repository https://create-react-app.dev/docs/deployment/#github-pages
+
+
+## References
+
+Some useful references used for this project
+
+ [React Bootstrap Table2](https://react-bootstrap-table.github.io/react-bootstrap-table2/storybook/index.html?selectedKind=Welcome&selectedStory=react%20bootstrap%20table%202%20&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+[Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/)
+
+[Create React App docs for deployment GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages)
+
 
 <br>
 
