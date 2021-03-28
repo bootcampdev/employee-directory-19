@@ -50,7 +50,7 @@ $ npx creeate-react-app employee-directory
 
 * Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
-* [GitHub Repository](https://create-react-app.dev/docs/deployment/#github-pages)
+* [GitHub Repository](https://github.com/bootcampdev/employee-directory-19/tree/source)
 * [Application using GitHub IO](https://bootcampdev.github.io/employee-directory-19/)
 
 
