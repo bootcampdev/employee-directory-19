@@ -1,58 +1,63 @@
 # Unit 19 React Homework: Employee Directory
+## employee-directory-19
+
+<br>
+
+[![Generic badge](https://img.shields.io/badge/Made%20with-React-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made%20with-JAVASCRIPT-yellow.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Ussed-Bootstrap%20Table-blue.svg)](https://shields.io/)
+
+
 
 ## Overview
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+This example creates an employee directory with React. This application breaks up the UI into components, manage component state, and respond to user events.
 
-## User Story
+## Details
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+The following components have been created and make up the UI.
 
-## Business Context
+  * Navbar
+  * API
+  * Employee
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+The API component includes the following api call, [Random User API](https://randomuser.me/), on page load.  This call generates an array of objects representing employees.  
 
-## Acceptance Criteria
+The Employee component returns a display of employees in a table format.  For this example, [react-bootstrap-table-next](https://www.npmjs.com/package/react-bootstrap-table-next), with the toolkit provider [react-bootstrap-table2-toolkit](https://www.npmjs.com/package/react-bootstrap-table2-toolkit) is used.  The react bootstrap tookkit provides the sorting, searching and filtering capablilites for our table component.
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+<br>
 
-The user should be able to:
+## Required Setup
 
-  * Sort the table by at least one category
+Initial project creation:
 
-  * Filter the users by at least one property.
+[Create React App](https://github.com/facebook/create-react-app).
 
-## Commit Early and Often
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+To Start:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+$ npm install
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+$ npm start
 
-Follow these guidelines for committing:
+or for continous updates
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+$ npx creeate-react-app employee-directory
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+<br>
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+## Deployment and Application Repository
 
 * Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
-* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
+* Repository [employee-directory-19](https://github.com/bootcampdev/employee-directory-19)
 
-## Submission on BCS
+<br>
 
-You are required to submit the following:
+## Demo
 
-* the URL to the deployed application
+![demo](ReactApp.gif)
 
-* the URL to the Github repository
 
-$ npm i axios
-$ npm react-table
