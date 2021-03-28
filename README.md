@@ -5,7 +5,7 @@
 
 [![Generic badge](https://img.shields.io/badge/Made%20with-React-blue.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Made%20with-JAVASCRIPT-yellow.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Ussed-Bootstrap%20Table-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Used-Bootstrap%20Table-blue.svg)](https://shields.io/)
 
 
 
