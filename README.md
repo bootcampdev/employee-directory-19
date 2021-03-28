@@ -25,7 +25,6 @@ The API component includes the following api call, [Random User API](https://ran
 
 The Employee component returns a display of employees in a table format.  For this example, [react-bootstrap-table-next](https://www.npmjs.com/package/react-bootstrap-table-next), with the toolkit provider [react-bootstrap-table2-toolkit](https://www.npmjs.com/package/react-bootstrap-table2-toolkit) is used.  The react bootstrap tookkit provides the sorting, searching and filtering capablilites for our table component.
 
-<br>
 
 ## Required Setup
 
@@ -46,7 +45,6 @@ or for continous updates
 
 $ npx creeate-react-app employee-directory
 
-<br>
 
 ## Deployment and Application Repository
 
